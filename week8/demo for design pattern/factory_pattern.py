@@ -1,10 +1,12 @@
 from abc import ABC, abstractmethod
 
+
 class Factory(ABC):
-    
+
     @abstractmethod
     def create_product(self, kind=None):
         pass
+
 
 class AnimalFactory(Factory):
     def __init__(self):
@@ -18,21 +20,25 @@ class AnimalFactory(Factory):
 
         return animal
 
+
 class DogFactory(Factory):
-    
+
     def create_product(self, kind=None):
         pass
 
+
 class CatFactory(Factory):
-    
+
     def create_product(self, kind=None):
         pass
+
 
 class Animals(ABC):
 
     @abstractmethod
     def run(self):
         pass
+
 
 class Dog(Animals):
 
@@ -46,9 +52,6 @@ class Cat(Animals):
 
     def run(self):
         print(f"I'm a Cat, I can run!!")
-
-
-
 
 
 # client

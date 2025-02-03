@@ -1,18 +1,16 @@
-
 class Singleton:
 
     def __new__(cls):
         if not hasattr(cls, "_instance"):
             cls._instance = super().__new__(cls)
-            
+
         return cls._instance
-        
+
 
 a = Singleton()
 b = Singleton()
 
 print(id(a), id(b))
-
 
 # class MyClass(Singleton):
 
@@ -21,7 +19,7 @@ print(id(a), id(b))
 
 #     def __str__(self):
 #         return f"a is {self.a}"
-    
+
 # class_a = MyClass(10)
 # print(class_a)
 # class_b = MyClass(20)

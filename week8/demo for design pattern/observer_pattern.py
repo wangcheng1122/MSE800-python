@@ -13,16 +13,17 @@ class Company_Info:
         for staff in self.staffs:
             staff.update(self)
 
+
 class Concrete_Company_Info(Company_Info):
 
     def __init__(self):
         super().__init__()
         self.__news = None
-        
+
     @property
     def news(self):
         return self.__news
-    
+
     @news.setter
     def news(self, new_message):
         self.__news = new_message
@@ -35,8 +36,6 @@ class Staff:
 
     def update(self, target):
         print(f"{self.name} knows the news {target.news}!!")
-
-
 
 
 # client

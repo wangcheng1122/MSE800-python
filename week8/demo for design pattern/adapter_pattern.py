@@ -1,15 +1,18 @@
 from abc import ABC, abstractmethod
 
+
 class PaymentMethod(ABC):
 
     @abstractmethod
     def pay(self, money):
         pass
 
+
 class ApplePay(PaymentMethod):
 
     def pay(self, money):
         print(f"Applepay: {money} dollars.")
+
 
 class GooglePay(PaymentMethod):
 
@@ -18,13 +21,13 @@ class GooglePay(PaymentMethod):
 
 
 class VisaPay:
-    
+
     def cost(self, money):
         print(f"visapay: {money} dollars.")
 
 
 class VisaAdapter(PaymentMethod, VisaPay):
-    
+
     def pay(self, money):
         self.cost(money)
 
@@ -59,4 +62,3 @@ masterpay = Adapter(masterpay)
 
 visapay.pay(40)
 masterpay.pay(50)
-
