@@ -5,11 +5,29 @@
     <title>Flask Web App</title>
 </head>
 <body>
-    <h1>Welcome to Flask!</h1>
-    <img src="../static/pictures/OIP.jpg"></br>
-    <button id="alertBtn">Click Me</button>
-    <a href="/mySecondPage"><button>Go to my second page</button></a>
-    <script src="/static/script.js"></script>
+<h1>Welcome to Flask!</h1>
+<img src="../static/pictures/OIP.jpg"></br>
+<button id="alertBtn">Click Me</button>
+<a href="/mySecondPage">
+    <button>Go to my second page</button>
+</a>
+
+<form id="myForm" action="" method="get">
+    please input your age <input type="text" name="age" id="ageInput">
+    <button type="button" onclick="submitForm()">提交</button>
+</form>
+
+<script>
+    function submitForm() {
+        var age = document.getElementById('ageInput').value;
+        var form = document.getElementById('myForm');
+        form.action = "/mySecondPage/" + age;
+        form.submit();
+    }
+</script>
+
+
+<script src="/static/script.js"></script>
 
 </body>
 </html>
