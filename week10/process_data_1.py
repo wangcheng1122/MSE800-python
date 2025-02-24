@@ -5,6 +5,7 @@ Author: Guan Wang
 Date: 08-02-2025
 """
 
+
 def clean_data(data):
     """
     Clean data
@@ -21,6 +22,7 @@ def clean_data(data):
         cleaned_data.append(item)
     return cleaned_data
 
+
 def transform_data(cleaned_data):
     # step 2: Transform data
     transformed_data = []
@@ -29,6 +31,7 @@ def transform_data(cleaned_data):
             item = item.upper()
         transformed_data.append(item)
     return transformed_data
+
 
 def summarize_data(transformed_data):
     # step 3: Summarize data

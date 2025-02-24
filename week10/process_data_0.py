@@ -22,3 +22,24 @@ def process_data(data):
             summary[item] = 1
 
     return summary
+
+
+if __name__ == '__main__':
+    # 模拟数据
+    data = [
+        " apple ",  # 带空格的字符串
+        "banana",  # 普通字符串
+        "Apple",  # 大写字母开头的字符串
+        "banana",  # 重复的字符串
+        "orange",  # 普通字符串
+        123,  # 非字符串类型
+        None,  # None 类型
+        "  grape  ",  # 带空格的字符串
+        "banana",  # 重复的字符串
+        "ORANGE",  # 大写字符串
+        "Grape",  # 大写字母开头的字符串
+    ]
+
+    # 调用 process_data 函数并打印结果
+    summary = process_data(data)
+    print(summary)
